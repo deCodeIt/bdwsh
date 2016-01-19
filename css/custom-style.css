@@ -1,0 +1,22 @@
+body{
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+div.container-fluid{
+	position: absolute;
+	width:100%;
+	/*margin: auto 0;*/
+}
+div.memory-container{
+	z-index: 1;
+	width:90%;
+	/*margin-left: 5%;*/
+}
+#memorybook > div[page] p{
+	opacity: 0;
+}
+#sunset2rise{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
