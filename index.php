@@ -1,5 +1,5 @@
 <?php
-include '/subfiles/scripts.inc.php';
+include './subfiles/scripts.inc.php';
 ?>
 
 <!DOCTYPE HTML>
@@ -8,9 +8,9 @@ include '/subfiles/scripts.inc.php';
         <meta charset="utf-8">
         <title>Happy New Year 2016</title>
         
-        <link rel="stylesheet" type="text/css" href="/css/custom-style.css">
-        <link rel="stylesheet" type="text/css" href="/css/book.css">
-        <script src="/js/turn.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/custom-style.css">
+        <link rel="stylesheet" type="text/css" href="./css/book.css">
+        <script src="./js/turn.min.js"></script>
         
 
     </head>
@@ -21,9 +21,9 @@ include '/subfiles/scripts.inc.php';
     		<div id="memorybook">
                 <div class="hard"><p>2015 FlashBack!</p></div> 
                 <!-- <div class="hard"></div> -->
-                <div> <p><img src="/images/img1.jpg" /></p> </div>
+                <div> <p><img src="./images/img1.jpg" /></p> </div>
                 <div> <p>Memory</p> </div>
-                <div> <p><img src="/images/img1.jpg" /></p> </div>
+                <div> <p><img src="./images/img1.jpg" /></p> </div>
                 <div> <p>Memory</p> </div>
 
                 
@@ -37,7 +37,7 @@ include '/subfiles/scripts.inc.php';
     	</div>
     </div>
     </body>
-    <script src="/js/memory.js"></script>
-    <script type="text/javascript" src="/js/sun.js"></script>
-    <script src="/js/firecracker.js"></script>
+    <script src="./js/memory.js"></script>
+    <script type="text/javascript" src="./js/sun.js"></script>
+    <script src="./js/firecracker.js"></script>
 </html>

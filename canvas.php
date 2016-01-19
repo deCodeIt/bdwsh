@@ -1,5 +1,5 @@
 <?php
-include '/subfiles/scripts.inc.php';
+include './subfiles/scripts.inc.php';
 ?>
 
 <!DOCTYPE HTML>
@@ -7,7 +7,7 @@ include '/subfiles/scripts.inc.php';
     <head>
         <meta charset="utf-8">
         <title>Happy New Year 2016</title>
-        <script type="text/javascript" src="/js/sun.js"></script>
+        <script type="text/javascript" src="./js/sun.js"></script>
     </head>
     <body>
     <div class="container-fluid" id="main-contain">
