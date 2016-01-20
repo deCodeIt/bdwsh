@@ -13,13 +13,15 @@ include './subfiles/scripts.inc.php';
         <script src="./js/turn.min.js"></script>
         <script type="text/javascript">
         function afterLoaded(){
-            go.shiftsun(C_X,C_Y);
+            $('div#main-contain').addClass('active');
             $(document).ready(function(){
                 $('#myModal').removeClass('show');
                 $('#myModal').addClass('hide');
                 console.log("Modal off");
             });
-            $('div#main-contain').addClass('active');
+            go.shiftsun(C_X,C_Y);
+            
+            
         }
         </script>
 
