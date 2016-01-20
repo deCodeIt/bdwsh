@@ -126,7 +126,7 @@
             go();
             sky.onload = go;
             sky.src = "./../images/sky_image.jpg";
-            setTimeout(function(){go.shiftsun(C_X,C_Y)},1000);
+            //setTimeout(function(){go.shiftsun(C_X,C_Y)},1000);
             //interval = setInterval(go.shiftsun, 200);
             console.log("JQuery Ended");
 
@@ -142,6 +142,7 @@
               go();
               sky.onload = go;
             sky.src = "./../images/sky_image.jpg";
+            go.shiftsun(C_X,C_Y);
             //interval = setInterval(go.shiftsun, 200);
             });
         });

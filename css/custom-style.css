@@ -1,11 +1,18 @@
 body{
 	overflow-x:hidden;
 	overflow-y:hidden;
+	background: url('./../images/shooting_stars.jpg') center;
 }
 div.container-fluid{
 	position: absolute;
 	width:100%;
 	/*margin: auto 0;*/
+}
+div#main-contain{
+	display: none;
+}
+div#main-contain.active{
+	display: block;
 }
 div.memory-container{
 	z-index: 1;

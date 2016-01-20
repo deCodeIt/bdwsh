@@ -11,11 +11,42 @@ include './subfiles/scripts.inc.php';
         <link rel="stylesheet" type="text/css" href="./css/custom-style.css">
         <link rel="stylesheet" type="text/css" href="./css/book.css">
         <script src="./js/turn.min.js"></script>
-        
+        <script type="text/javascript">
+        function afterLoaded(){
+            go.shiftsun(C_X,C_Y);
+            $(document).ready(function(){
+                $('#myModal').removeClass('show');
+                $('#myModal').addClass('hide');
+                console.log("Modal off");
+            });
+            $('div#main-contain').addClass('active');
+        }
+        </script>
 
     </head>
     <body>
     <canvas id="sunset2rise" width="200" height="100"></canvas>
+
+<!-- Modal -->
+<div id="myModal" class="modal show" role="dialog">
+  <div class="modal-dialog modal-sm">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <center><button type="button" onclick="afterLoaded()" class="btn btn-primary" data-dismiss="modal">Let the Journey begin</button></center>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+
+  </div>
+</div>
     <div class="container-fluid" id="main-contain">
         <div class="memory-container col-xs-12">
     		<div id="memorybook">
