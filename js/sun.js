@@ -1,5 +1,5 @@
 //initializing parameters
-        var ctx,sky,gr;
+        var ctx,sky,gr,ANIMATE_PARTS=20.0,FINAL_X;
 
         //Defining screen width and height
         var SCREEN_WD = window.innerWidth,
@@ -24,6 +24,36 @@
 
             // define sunrise and sunset times (in 24-hour clock, can be fractional)
             var time = INITIAL_TIME, sunrise = 7, sunset = 19;
+            function dragsun(a,b,depth){
+              // animates the shifting of sun from a to b
+              i=0;
+              if(depth==1)
+              {
+                //set the final state to reach (position)
+                FINAL_X=a;
+              }
+              if(depth<=ANIMATE_PARTS)
+              {
+                console.log("Animating Sun");
+                
+                console.log("Sun animated by "+depth+" part");
+                setTimeout(function(){
+                  if(depth!=1)
+                    go.shiftsun(a,b);
+                  dragsun(C_X+(FINAL_X-C_X)*depth/ANIMATE_PARTS,b,depth+1);
+                  
+                },20);
+                
+              }
+              else
+              {
+                C_X=a,
+                C_Y=b;
+                console.log("Animation of Sun ends with C_X:"+C_X+", C_Y:"+C_Y);
+              }
+            }
+            go.dragsun=dragsun;
+
             function shiftsun(a,b) {
                 console.log("shiftsun called with params: "+a+","+b);
               var normTime = getTime(a,b);                                  // get normalized time
@@ -96,7 +126,7 @@
             go();
             sky.onload = go;
             sky.src = "./../images/sky_image.jpg";
-            setTimeout(function(){go.shiftsun(1,100)},1000);
+            setTimeout(function(){go.shiftsun(C_X,C_Y)},1000);
             //interval = setInterval(go.shiftsun, 200);
             console.log("JQuery Ended");
 

@@ -49,7 +49,7 @@ function launch() {
 }
 
 function launchFrom(x) {
-    if (rockets.length < 1) {
+    if (rockets.length < 4) {
         var rocket = new Rocket(x);
         rocket.explosionColor = Math.floor(Math.random() * 360 / 10) * 10;
         rocket.vel.y = Math.random() * -3 - 4;

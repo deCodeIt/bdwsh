@@ -1,6 +1,8 @@
 var SCREEN_W = window.innerWidth,
     SCREEN_H = window.innerHeight,
-    BOOK_H = 400;
+    BOOK_H = 400,
+    C_X=1,//x Coordinate of sun
+    C_Y=100;//y Coordinate of sun
 $(document).ready(function() {
 	$("#memorybook").turn({
 		autoCenter: true,
@@ -32,6 +34,7 @@ $(document).ready(function() {
 	  		//I am on the last page
 	  		$("#memorybook").addClass("exitclass");
 	  		$("#sunset2rise").hide();
+	  		//calls the firecracker function
 	  		initiate();
 	  		//setTimeout(function(){$("#memorybook").remove()},1000);
 	  	}
@@ -43,7 +46,8 @@ $(document).ready(function() {
 		  	{
 		  		//set the sun's position
 		  		console.log("Calling shiftsun");
-		  		go.shiftsun(pg,n_pages);
+		  		// go.shiftsun(pg,n_pages);
+		  		go.dragsun(pg,n_pages,1);
 		  		console.log("shiftsun was called after turning");
 		  	}
 		  	if(parseInt($(obj).css("padding-top"))==0)
