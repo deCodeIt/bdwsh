@@ -124,7 +124,7 @@
             gr = ctx.createLinearGradient(0, 0, 0, ctx.canvas.height),
             sky = new Image();
             go();
-            //sky.onload = go;
+            sky.onload = go();
             sky.src = "./../images/sky_image.jpg";
             //setTimeout(function(){go.shiftsun(C_X,C_Y)},1000);
             //interval = setInterval(go.shiftsun, 200);
